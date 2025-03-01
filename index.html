@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backrooms Game</title>
+  <link rel="stylesheet" href="style.css">
+<style>body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 20px;
+}
+
+.level-buttons {
+  margin-top: 20px;
+}
+
+.level-button {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.2em;
+}
+
+.level-button:hover {
+  background-color: #666;
+}
+
+.level-description {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.level-container {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
+}
+
+.baby-container {
+  margin-top: 20px;
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.baby-action {
+  background-color: #666;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.baby-action:hover {
+  background-color: #888;
+}
+
+#commandInput {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+#executeCommand {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1.2em;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#executeCommand:hover {
+  background-color: #666;
+}</style>
+<body>
+  <h1>Backrooms Game</h1>
+  <p>Escolha um nível para entrar:</p>
+
+  <div class="level-buttons" id="levelButtons">
+    <button class="level-button" id="level0">Level 0 - O Labirinto Sem Fim</button>
+    <button class="level-button" id="level1">Level 1 - O Nível Escuro</button>
+    <button class="level-button" id="level2">Level 2 - O Nível Industrial</button>
+    <button class="level-button" id="levelPeppa">Level Peppa Pig</button>
+    <button class="level-button" id="level188">Level 188 - Os Prédios</button>
+    <button class="level-button" id="levelFun">Level Fun</button>
+    <button class="level-button" id="levelSupermercado">Level Supermercado Gigante</button>
+    <button class="level-button" id="levelCidade">Level Cidade</button>
+    <button class="level-button" id="level666">Level 666 - Baldi's Basics</button>
+  </div>
+
+  <div class="level-description" id="levelDescription">
+    <p>Escolha um nível para saber mais.</p>
+  </div>
+
+  <div id="labirintoAmarelo" class="level-container" style="display:none;">
+    <h2>Você está no Labirinto Amarelo (Level 0)</h2>
+    <p>Um labirinto de paredes amarelas e luzes fluorescentes. O lugar parece não ter fim. Procure uma saída!</p>
+  </div>
+
+  <div id="baldisBasics" class="level-container" style="display:none;">
+    <h2>Você está no Level 666 - Baldi's Basics</h2>
+    <p>Você entrou na escola maluca de Baldi. As paredes são estranhas e as regras são confusas. Cuidado com Baldi, que está por toda parte, e não se esqueça de pegar os cadernos!</p>
+  </div>
+
+  <!-- Bebê -->
+  <div id="baby" class="baby-container" style="display:none;">
+    <h2>Bebê</h2>
+    <p id="babyStatus">O bebê está fazendo xixi 💧</p>
+    <button id="babyPee" class="baby-action">Fazer Xixi</button>
+    <button id="babyPoop" class="baby-action">Fazer Cocô</button>
+    <button id="changeDiaper" class="baby-action">Trocar a Fralda</button>
+  </div>
+
+  <input type="text" id="commandInput" placeholder="Digite um comando...">
+  <button id="executeCommand">Executar Comando</button>
+
+  <script src="backrooms.js"></script>
+</body>
+</html>
